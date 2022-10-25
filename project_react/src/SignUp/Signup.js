@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 
 const Signup = () => {
     // 회원정보 입력받는 부분
@@ -7,7 +7,7 @@ const Signup = () => {
     const [pwCheck, setPwCheck] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    // const [emailList, setEmailList] = useState<string[]>([]);
+    // const [emailList, setEmailList] = useState('');
     const [phone, setPhone] = useState('');
     const [addr, setAddr] = useState('');
 
@@ -29,6 +29,7 @@ const Signup = () => {
     const [isPhone, setIsPhone] = useState('');
     const [isAddr, setIsAddr] = useState('');
 
+    // input창 제약조건
     const onChangId = (e) => {
         setId(e.target.value)
         if (e.target.value.length < 4 || e.target.value.length > 20) {
@@ -65,11 +66,10 @@ const Signup = () => {
         }      
     }
 
-
-  
-
-    const Email = () => {
-        const mailList = [
+    // 이메일 리스트 
+    const EmailList = (e) => {
+        setEmail(e.target.value) 
+        const setEmail = [
             '@naver.com',
             '@gmail.com',
             '@daum.net',
@@ -94,16 +94,16 @@ const Signup = () => {
                 <input className='input' value={pwCheck} placeholder="비밀번호 확인" onChange={onChangePwCheck} />
             </div>
             <div className='name'>
-                <input className='input' value={name} placeholder="이름 입력" />
+                <input className='input' value={name} placeholder="이름 입력"  />
             </div>
             <div className='email'>
-                <input className='mailList' value={email} placeholder="이메일 입력"  />
-                <datalist className='mailList' >
-                    <option value="@naver.com">naver.com</option>
-                    <option value="@gmail.com">gmail.com</option>
-                    <option value="@daum.net">daum.net</option>
-                    <option value="@nate.com">nate.com</option>
-                    <option value="@kakao.com">kakao.com</option>
+                <input className='mailList' value={email} placeholder="이메일 입력" onChange={EmailList}  />
+                <datalist className='mailList' value={email} >
+                    <option value="@naver.com">@naver.com</option>
+                    <option value="@gmail.com">@gmail.com</option>
+                    <option value="@daum.net">@daum.net</option>
+                    <option value="@nate.com">@nate.com</option>
+                    <option value="@kakao.com">@kakao.com</option>
                 </datalist>
             <fieldset>
                 <input className='input' value={phone} placeholder="전화번호 입력" /> 
