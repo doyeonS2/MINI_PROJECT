@@ -125,7 +125,8 @@ const Signup = () => {
             </div>
             </div>
         </div>
-        <button className='JoinUsBtn'>회원가입</button>
+        <button className='JoinUsBtn'>회원가입</button><br />
+        <span className='idCheck'>이미 아이디가 있으신가요?</span><button className='loginBtn'>> 로그인</button>
         </div>
        
         </div>

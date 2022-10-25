@@ -64,3 +64,17 @@
   border-radius: 10px;
 
 }
+
+.idCheck {
+  text-align: center;
+}
+
+.loginBtn {
+  border-top: none;
+  border-left: none;
+  border-right: none; 
+  border-color: blue;
+  border-width: 1.5px;
+  color: blue;
+  
+}
