@@ -83,10 +83,10 @@ const Signup = () => {
    
 
     return (
-        <form className='App'>
+        // <form className='App'>
         <div className='container'>
-        <fieldset className='JoinUs'>JOIN US</fieldset>
         <div className='item-box'>
+        <fieldset className='JoinUs'>JOIN US</fieldset>
         <div className='item'>
             <div className='id'><b className="star">* </b>아이디
                 <input className='input' value={id} placeholder="아이디" onChange={onChangId}  />
@@ -112,25 +112,27 @@ const Signup = () => {
                     <option value="@nate.com">nate.com</option>
                     <option value="@kakao.com">kakao.com</option>
                 </select><br/><b className="star">* </b>
-            <fieldset>전화번호
+            <fieldset className='phone-box'>전화번호
                 <input className='input-s' value={phone} placeholder="010" /> - <input className='input-s' value={phone} /> - <input className='input-s' value={phone} /> 
                 <button className='grayBtn'> 인증번호 전송</button><br />인증번호
                 <input className='input' value={phone} placeholder="인증번호 6자리" /> 
                 <button>확인</button>
             </fieldset>
             <div>주소
-                <input className='input' value={addr} placeholder="우편번호" /><br /> 
+                <input className='input' value={addr} placeholder="우편번호" /><button>우편번호 검색</button><br /> 
                 <input className='input' value={addr} placeholder="주소" /><br /> 
                 <input className='input' value={addr} placeholder="상세 주소" /> 
             </div>
             </div>
         </div>
         <button className='JoinUsBtn'>회원가입</button><br />
+        <fieldset className='check'>
         <span className='idCheck'>이미 아이디가 있으신가요?</span><button className='loginBtn'>> 로그인</button>
+        </fieldset>
         </div>
        
         </div>
-        </form>
+        // </form>
     );
 
     

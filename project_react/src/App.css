@@ -3,14 +3,10 @@
 #00ADB5 청록
 #EEEEEE 연회색 */
 
-.App {
-  display: flex;
-  justify-content: center;
-}
 
 .container {
-  
-  
+  display: flex;
+  justify-content: center;
 }
 
 .JoinUs {
@@ -20,18 +16,19 @@
   font-weight: bold;
   text-align: center;
   width: 100px;
+  height: 30px;
   border: none;
   border-radius: 10px;
-  
-  
+  margin: 0 100px 20px 145px;
   
 }
 
 .item-box {
   background-color: #EEEEEE;
   margin: 10px;
-  padding: 20px 20px 80px 20px;
+  padding: 20px 20px 20px 20px;
   text-align: left;
+  border-style: groove;
 
 }
 
@@ -43,11 +40,20 @@
   width: 40px;
 }
 
+.id, .pw, .pwCheck, .name, .email {
+  margin: 10px 10px 0 10px;
+}
+
+/* .phone-box {
+
+} */
+
 
 
 
 .item {
   background-color: white;
+  padding: 20px 15px 20px 15px;
 }
 
 
@@ -55,18 +61,22 @@
   color: #00ADB5;
 }
 
+.check {
+  width: 260px;
+  height: 30px;
+  border: none;
+  padding: 5px 0 0 100px;
+ 
+}
+
 .JoinUsBtn {
   background-color: black;
   color: white;
-  margin: 10px;
+  margin: 15px 40px 10px 60px;
   width: 300px;
   height: 40px;
   border-radius: 10px;
 
-}
-
-.idCheck {
-  text-align: center;
 }
 
 .loginBtn {
