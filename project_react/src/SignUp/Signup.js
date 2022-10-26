@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
     // 회원정보 입력받는 부분
@@ -78,32 +78,77 @@ const Signup = () => {
         } else onChangeEmailList.value = emailList
 
     }
+
+    // const domainListEl = document.querySelector('#domain-list')
+    // const domainInputEl = document.querySelector('#domain-txt')
+
+    // domainListEl.addEventListener('change', (e) => {
+    // if(e.target.value !== "type") {
+    //     domainInputEl.value = e.target.value
+    //     domainInputEl.disabled = true
+    // } else { 
+    //     domainInputEl.value = ""
+    //     domainInputEl.disabled = false
+    // }
+    // })
+
+
+
+    // // 아이디 중복 확인
+    // const memberCheck = await Api.memberRegCheck(inputId);
+    // console.log("가입 가능 여부 확인 : ", memberCheck.data);
+
+//     // 중복 체크 후 가입 절차 진행
+//     if (memberCheck.data.result === "OK") {
+//         console.log("가입된 아이디가 없습니다. 다음 단계 진행 합니다.");
+//         const memberReg = await KhApi.memberReg(inputId, inputPw, inputName, inputEmail);
+//         console.log(memberReg.data.result);
+//         if(memberReg.data.result === "OK") {
+//             window.location.replace("/");
+//         } else {
+//             setModalOpen(true);
+//             setModelText("회원 가입에 실패 했습니다.");
+//         }
+
+//     } else {
+//         console.log("이미 가입된 회원 입니다.")
+//         setModalOpen(true);
+//         setModelText("이미 가입된 회원 입니다.");
+//     } 
+// }
+
+
      
     
    
 
     return (
-        // <form className='App'>
+        
+      
         <div className='container'>
+            <Link to='/'>🏠홈으로 이동🏠</Link>
         <div className='item-box'>
-        <fieldset className='JoinUs'>JOIN US</fieldset>
+        <div className='JoinUs'>JOIN US</div>
+        <p className='comments'>👟Sa Shoe 회원가입 하고 예쁜 신발 Sa Shoe~👟 </p>
         <div className='item'>
-            <div className='id'><b className="star">* </b>아이디
+            <p className='comments2'><b className="star">* </b>표시 필수 입력</p>
+            <div className='notGrid'>
+            <div className='id'><b className="star">* </b><span className='item-text'>아이디</span>
                 <input className='input' value={id} placeholder="아이디" onChange={onChangId}  />
                 <button>중복 확인</button>
             </div>
-            <div className='pw'><b className="star">* </b>비밀번호
+            <div className='pw'><b className="star">* </b><span className='item-text'>비밀번호</span>
                 <input className='input' value={pw} placeholder="비밀번호" onChange={onChangePw} />
             </div>
-            <div className='pwCheck'><b className="star">* </b>비밀번호 확인
-                <input className='input' value={pwCheck} placeholder="비밀번호" onChange={onChangePwCheck} />
+            <div className='pwCheck'><b className="star">* </b><span className='item-text'>비밀번호 확인</span>
+                <input className='input' value={pwCheck} placeholder="비밀번호 확인" onChange={onChangePwCheck} />
             </div>
-            <div className='name'><b className="star">* </b>이름
+            <div className='name'><b className="star">* </b><span className='item-text'>이름</span>
                 <input className='input' value={name} placeholder="이름" onChange={onChangeName}  />
             </div>
-            <div className='email'><b className="star">* </b>이메일
-                <input className='input' value={email} placeholder="이메일" onChange={onChangeEmail} />@
-                <input className='input' value={emailList} onChange={onChangeEmailList} />
+            <div className='email'><b className="star">* </b><span className='item-text'>이메일</span>
+                <input className='input-e' value={email} placeholder="이메일" onChange={onChangeEmail} /> @
+                <input className='input-eList' value={emailList} placeholder="(직접 입력)" onChange={onChangeEmailList} />
                 <select className='list' value={emailList} >
                     <option value="직접 입력">직접 입력</option>
                     <option value="@naver.com">naver.com</option>
@@ -111,28 +156,33 @@ const Signup = () => {
                     <option value="@daum.net">daum.net</option>
                     <option value="@nate.com">nate.com</option>
                     <option value="@kakao.com">kakao.com</option>
-                </select><br/><b className="star">* </b>
-            <fieldset className='phone-box'>전화번호
-                <input className='input-s' value={phone} placeholder="010" /> - <input className='input-s' value={phone} /> - <input className='input-s' value={phone} /> 
-                <button className='grayBtn'> 인증번호 전송</button><br />인증번호
+                </select><br/>
+            </div>
+            </div>
+            <div className='grid-box'>  
+            <b className="star">* </b>
+            <div className='phone-box'><span className='item-text1'>전화번호</span>
+                <input className='input-s' value={phone} placeholder="010" /> - <input className='input-s' value={phone} /> - <input className='input-end' value={phone} /> 
+                <button className='grayBtn'> 인증번호 전송</button><br /><span className='item-text2'>인증번호</span>
                 <input className='input' value={phone} placeholder="인증번호 6자리" /> 
                 <button>확인</button>
-            </fieldset>
-            <div>주소
+            </div><br />
+            <div className='addr-box'><span className='item-text3'>주소</span>
                 <input className='input' value={addr} placeholder="우편번호" /><button>우편번호 검색</button><br /> 
-                <input className='input' value={addr} placeholder="주소" /><br /> 
-                <input className='input' value={addr} placeholder="상세 주소" /> 
+                <span className='item-text3'></span><input className='input' value={addr} placeholder="주소" /><br /> 
+                <span className='item-text3'></span><input className='input' value={addr} placeholder="상세 주소" /> 
             </div>
-            </div>
+            </div>  
+            
         </div>
         <button className='JoinUsBtn'>회원가입</button><br />
         <fieldset className='check'>
-        <span className='idCheck'>이미 아이디가 있으신가요?</span><button className='loginBtn'>> 로그인</button>
+        <span className='idCheck'>이미 아이디가 있으신가요? </span><Link to='/Login'> ＞ 로그인</Link>
         </fieldset>
         </div>
        
         </div>
-        // </form>
+        
     );
 
     

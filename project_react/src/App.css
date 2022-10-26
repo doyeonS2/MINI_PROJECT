@@ -7,20 +7,32 @@
 .container {
   display: flex;
   justify-content: center;
+  padding: 100px;
 }
 
 .JoinUs {
   background-color: #00ADB5;
   color: aliceblue;
-  font-size: x-large;
+  font-size: xx-large;
   font-weight: bold;
-  text-align: center;
-  width: 100px;
-  height: 30px;
-  border: none;
+  width: 150px;
+  height: 50px;
   border-radius: 10px;
-  margin: 0 100px 20px 145px;
+  margin: 0 0 10px 180px;
+  display: block;
+  text-align: center;
   
+}
+
+.comments {
+  color: red;
+  font-size: 13px;
+  margin: 0 0 10px 110px;
+}
+
+.comments2 {
+  font-size: small;
+  text-align: right;
 }
 
 .item-box {
@@ -31,38 +43,105 @@
   border-style: groove;
 
 }
+.item-text {
+  display: inline-block;
+  width: 110px;
+  padding-left: 10px;
+}
+
+.item-text1 {
+  display: inline-block;
+  width: 100px;
+}
+
+.item-text2 {
+  display: inline-block;
+  width: 90px;
+}
+
+.item-text3 {
+  display: inline-block;
+  width: 55px;
+}
 
 .input {
-  width: 120px;
+  width: 150px;
+  margin: 0 10px 0 10px;
+}
+
+.input-e {
+  width: 80px;
+  margin-left: 10px;
+}
+
+.input-eList {
+  width: 100px;
+  margin: 0 10px 0 10px;
+  
 }
 
 .input-s {
   width: 40px;
 }
 
+.input-end {
+  width: 40px;
+  margin-right: 10px;
+}
+
 .id, .pw, .pwCheck, .name, .email {
   margin: 10px 10px 0 10px;
 }
 
-/* .phone-box {
-
-} */
-
-
-
-
 .item {
   background-color: white;
-  padding: 20px 15px 20px 15px;
+  padding: 5px 15px 30px 15px;
 }
 
 
 .star {
   color: #00ADB5;
+
+}
+
+
+.phone-box {
+  border: solid 1px #d8d7d7;
+  padding: 10px;
+  width: 385px;
+  display: inline-block;
+  margin: 0 10px 0 10px;
+}
+
+.addr-box {
+  border: solid 1px #d8d7d7;
+  padding: 10px;
+  width: 385px;
+  display: inline-block;
+  margin: 10px 10px 0 10px;
+
+}
+
+.notGrid {
+  padding-bottom: 15px;
+}
+
+.grid-box {
+  display: grid;
+  width: 300px;
+  margin-left: 10px;
+  grid-template-columns: 2, 5px;
+  grid-template-rows: 10x;
+  grid-template-areas: 
+    "star phone-box"
+}
+
+.idCheck {
+  font-size: small;
 }
 
 .check {
-  width: 260px;
+  width: 270px;
   height: 30px;
   border: none;
   padding: 5px 0 0 100px;
@@ -72,7 +151,7 @@
 .JoinUsBtn {
   background-color: black;
   color: white;
-  margin: 15px 40px 10px 60px;
+  margin: 15px 0 10px 100px;
   width: 300px;
   height: 40px;
   border-radius: 10px;
@@ -83,7 +162,7 @@
   border-top: none;
   border-left: none;
   border-right: none; 
-  border-color: blue;
+  border-color: rgba(49, 49, 235, 0.705);
   border-width: 1.5px;
   color: blue;
   
