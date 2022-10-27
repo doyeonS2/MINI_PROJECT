@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
+// import styled from 'style-components';
+
+
+// const Container = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     padding: 100px;
+//   `;
+  
+
 const Signup = () => {
     // 회원정보 입력받는 부분
     const [id, setId] = useState(''); 
@@ -79,52 +89,9 @@ const Signup = () => {
 
     }
 
-    // const domainListEl = document.querySelector('#domain-list')
-    // const domainInputEl = document.querySelector('#domain-txt')
 
-    // domainListEl.addEventListener('change', (e) => {
-    // if(e.target.value !== "type") {
-    //     domainInputEl.value = e.target.value
-    //     domainInputEl.disabled = true
-    // } else { 
-    //     domainInputEl.value = ""
-    //     domainInputEl.disabled = false
-    // }
-    // })
-
-
-
-    // // 아이디 중복 확인
-    // const memberCheck = await Api.memberRegCheck(inputId);
-    // console.log("가입 가능 여부 확인 : ", memberCheck.data);
-
-//     // 중복 체크 후 가입 절차 진행
-//     if (memberCheck.data.result === "OK") {
-//         console.log("가입된 아이디가 없습니다. 다음 단계 진행 합니다.");
-//         const memberReg = await KhApi.memberReg(inputId, inputPw, inputName, inputEmail);
-//         console.log(memberReg.data.result);
-//         if(memberReg.data.result === "OK") {
-//             window.location.replace("/");
-//         } else {
-//             setModalOpen(true);
-//             setModelText("회원 가입에 실패 했습니다.");
-//         }
-
-//     } else {
-//         console.log("이미 가입된 회원 입니다.")
-//         setModalOpen(true);
-//         setModelText("이미 가입된 회원 입니다.");
-//     } 
-// }
-
-
-     
-    
-   
 
     return (
-        
-      
         <div className='container'>
             <Link to='/'>🏠홈으로 이동🏠</Link>
         <div className='item-box'>
@@ -182,10 +149,8 @@ const Signup = () => {
         </div>
        
         </div>
-        
-    );
-
     
+    ); 
+}    
 
-}
 export default Signup;

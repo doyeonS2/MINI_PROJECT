@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+// import StyledComponent from './StylesComponent';
 
 import Signup from './signup/Signup';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
